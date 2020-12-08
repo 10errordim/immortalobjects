@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>IO callroom</title>
+    <title>IO Callroom</title>
 
     <!-- import the webpage's stylesheet -->
     <link
@@ -29,7 +29,7 @@
 
       <div>
         <button class="button is-primary" v-if="!room" @click="createRoom">
-          Tạo Meeting
+          Create Meeting
         </button>
 
         <button class="button is-info" v-if="!room" @click="joinWithId">
@@ -42,9 +42,9 @@
       </div>
 
       <div v-if="roomId" class="info">
-        <p>Bạn đang ở trong room <strong>{{roomId}}</strong>.</p>
+        <p>Room ID:  <strong>{{roomId}}</strong></p>
         <p>
-          Room link: <br>
+          Room link: 
           <a v-bind:href="roomUrl" target="_blank">{{roomUrl}}</a>
         </p>
       </div>
