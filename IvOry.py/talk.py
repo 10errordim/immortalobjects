@@ -6,5 +6,4 @@ saying = pyttsx3.init()
 saying.say(brain)
 saying.runAndWait()
 
-
-
+#still dont know what this is
