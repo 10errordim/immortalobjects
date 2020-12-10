@@ -3,9 +3,16 @@ import './App.scss';
 
 function App() {
   return (
-    <div className="app">
-      <h1>Surprisemotherfucker</h1>
-    </div>
+    <html>
+      <head>
+        <meta charset="utf-8"></meta>
+      </head>
+      <body>
+        <div className="app">
+          <h1>Surprisemotherfucker</h1>
+        </div>
+      </body>
+    </html>
   );
 }
 
