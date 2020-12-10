@@ -1,10 +1,10 @@
 import React from 'react';
-import '\App.scss';
+import './App.scss';
 
 function App() {
   return (
     <div className="app">
-      <h1>Surprise motherfucker</h1>
+      <h1>Surprisemotherfucker</h1>
     </div>
   );
 }
