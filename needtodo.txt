@@ -1,0 +1,21 @@
+1. Bàn về những mảng cần làm hiện tại trong sự án khkt
+2. Viết đề cương nghiên cứu
+3. Làm về trc giao diện một trang
+---------------------------------
+#Tường chuyên môn:
+*Giao diện phân nhóm:
+- Phân nhóm: Khối 10, 11, 12
++ Trong mỗi khối sẽ chia ra làm các môn cụ thể:
+__Tin: Dũng, Phúc
+__Anh: Phúc, Vũ
+__Lý: Vũ, Phúc
+__Văn: ?
+__Hóa: Hiền
+*Giao diện tin nhắn:
+- Đặt hẹn:
++ Book lịch
++ Check thời gian rảnh của người phụ trách:
+__Đăng lịch chủ động
+__Xem lịch bị động
+- Tin nhắn:
++ Như mess
