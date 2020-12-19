@@ -1,0 +1,22 @@
+@import "https://use.fontawesome.com/releases/v5.5.0/css/all.css";
+body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Times New Roman', Times, serif;
+  background: url(./test/Test.jpg) repeat;
+  background-size: cover;
+}
+
+.thanh_tim_kiem{
+    margin: 10px;
+    margin-top: 10px;
+    transform: translate3d(-60%,-60%);
+    color: rgb(0, 0, 0);
+    text-align: left;
+    font-size: large;
+    border-top: 3px solid silver;
+    border-bottom: 3px solid silver;
+    border-right: 3px solid silver;
+    border-left: 3px solid silver;
+    position: relative;
+}
