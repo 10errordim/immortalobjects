@@ -1,0 +1,69 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+    
+
+        {
+            "name": "Python",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - World",
+            "request": "launch",
+            "mainClass": "Java.World",
+            "projectName": "Program Files_d46ec987"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - HelloWorld",
+            "request": "launch",
+            "mainClass": "Java.HelloWorld",
+            "projectName": "Program Files_d46ec987"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Hello",
+            "request": "launch",
+            "mainClass": "Hello",
+            "projectName": "Program Files_d46ec987"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Hello",
+            "request": "launch",
+            "mainClass": "Java.Hello",
+            "projectName": "Program Files_d46ec987"
+        },
+        {
+            "name": "C/C++",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "C:\\Program Files (x86)\\mingw-w64\\i686-8.1.0-win32-dwarf-rt_v6-rev0\\mingw32\\bin\\gdb.exe",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "C/C++"
+        },
+        {
+            "type": "pwa-node",
+            "name": "JavaScript",
+            "request": "launch",
+            "program": "${workspaceFolder}\\JavaScript\\Helloworld.js"
+        }
+    ]
+}

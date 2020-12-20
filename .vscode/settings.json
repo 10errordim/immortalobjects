@@ -1,0 +1,22 @@
+{
+    "files.associations": {
+        "iostream": "cpp",
+        "iosfwd": "cpp",
+        "fstream": "cpp",
+        "array": "cpp",
+        "string": "cpp",
+        "string_view": "cpp",
+        "*.tcc": "cpp",
+        "bitset": "cpp",
+        "new": "cpp",
+        "cmath": "cpp",
+        "functional": "cpp",
+        "random": "cpp",
+        "regex": "cpp",
+        "vector": "cpp"
+    },
+    "C_Cpp.errorSquiggles": "Disabled",
+    "python.pythonPath": "C:\\Users\\PC\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+    "testMate.cpp.log.logSentry": "disable_3",
+    "git.ignoreLimitWarning": true
+}
