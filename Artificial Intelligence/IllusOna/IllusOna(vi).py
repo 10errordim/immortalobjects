@@ -67,8 +67,8 @@ else:
 
 
 tts = gTTS(text = brain, lang = 'vi')
-tts.save("IvOry.mp3")
-os.system("IvOry.mp3")
+tts.save("IllusOna.mp3")
+os.system("IllusOna.mp3")
 
 
 print("IllusOna: " + brain)
