@@ -1,7 +1,7 @@
 import speech_recognition as sr
 import pyttsx3
 import pywhatkit
-import datetime
+from datetime import date, datetime
 import wikipedia
 import pyjokes
 
@@ -21,15 +21,16 @@ def talk(text):
 
 
 def take_command():
+    user = ""
     try:
         with sr.Microphone() as source:
-            user = ""
             print("Listening...")
+            talk("Listening...")
             voice = listener.listen(source)
             user = listener.recognize_google(voice)
             user = user.upper()
-            if "IVORY" in user:
-                user = user.replace("IVORY", "")
+            if "IVORY SAY" in user:
+                user = user.replace("IVORY SAY", "")
                 print(user)
     except:
         pass
@@ -41,27 +42,39 @@ while True:
     print(user)
     if "PLAY" in user:
         song = user.replace("PLAY", "")
+        print("PLaying", song)
         talk("Playing " + song)
+        print("Use me agian!")
         talk("Use me again!")
         pywhatkit.playonyt(song)
         break
     elif "TIME" in user:
-        time = datetime.datetime.now().strftime("%I:%M %p")
-        print("Current time is " + time)
-        talk("Current time is " + time)
-    elif "TELL ME WHO IS" in user:
-        person = user.replace("TELL ME WHO IS", "")
+        now = datetime.now()
+        print("It is " + now.strftime("%H hours %M minutes %S seconds") + " by now.")
+        talk("It is " + now.strftime("%H hours %M minutes %S seconds") + " by now.")
+    elif "WHO IS" in user:
+        person = user.replace("WHO IS", "")
         info = wikipedia.summary(person, 1)
         print(info)
         talk(info)
-    elif "DATE" in user:
-        talk("Sorry, I have a headache")
+    elif "TODAY IS" in user or "IS TODAY" in user:
+        today = date.today()
+        dateinfo = "Today is " + today.strftime("%B %d, %Y")
+        print(dateinfo)
+        talk(dateinfo)
     elif "ARE YOU SINGLE" in user:
-        talk("I am in a relationship with your wifi")
-        print("I am in a relationship with your wifi")
+        print("I am in a relationship with your wifi.")
+        talk("I am in a relationship with your wifi.")
     elif "JOKE" in user:
+        print(pyjokes.get_joke())
         talk(pyjokes.get_joke())
     elif "GOODBYE" in user or "BYE" in user:
+        print("Goodbye!")
+        talk("Goodbye!")
         break
+    elif "THANKS" in user or "THANK YOU" in user:
+        print("Your wellcome")
+        talk("Your wellcome")
     else:
+        print("Please say the command again!")
         talk("Please say the command again!")
