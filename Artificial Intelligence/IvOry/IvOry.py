@@ -76,6 +76,9 @@ def main_program():
         elif "THANKS" in user.upper() or "THANK YOU" in user.upper():
             print("Your wellcome")
             talk("Your wellcome")
+        elif "I LOVE YOU" in user.upper():
+            print("I love you too!")
+            talk("I love you too!")
         else:
             print("Please say the command again!")
             talk("Please say the command again!")
