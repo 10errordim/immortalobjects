@@ -28,9 +28,9 @@ def take_command():
             talk("Listening...")
             voice = listener.listen(source)
             user = listener.recognize_google(voice)
-            user = user.upper()
+            # user = user.upper()
             if "IVORY SAY" in user:
-                user = user.replace("IVORY SAY", "")
+                user = user.upper().replace("IVORY SAY", "")
                 print(user)
     except:
         pass
@@ -41,39 +41,39 @@ def main_program():
     while True:
         user = take_command()
         print(user)
-        if "PLAY" in user:
-            song = user.replace("PLAY", "")
+        if "PLAY" in user.upper():
+            song = user.upper().replace("PLAY", "")
             print("PLaying", song)
             talk("Playing " + song)
-            print("Use me agian!")
+            print("Use me again!")
             talk("Use me again!")
             pywhatkit.playonyt(song)
             break
-        elif "TIME" in user:
+        elif "TIME" in user.upper():
             now = datetime.now()
             print("It is " + now.strftime("%H hours %M minutes %S seconds") + " by now.")
             talk("It is " + now.strftime("%H hours %M minutes %S seconds") + " by now.")
-        elif "WHO IS" in user:
-            person = user.replace("WHO IS", "")
+        elif "WHO IS" in user.upper():
+            person = user.upper().replace("WHO IS", "")
             info = wikipedia.summary(person, 1)
             print(info)
             talk(info)
-        elif "TODAY IS" in user or "IS TODAY" in user:
+        elif "TODAY IS" in user.upper() or "IS TODAY" in user.upper():
             today = date.today()
             dateinfo = "Today is " + today.strftime("%B %d, %Y")
             print(dateinfo)
             talk(dateinfo)
-        elif "ARE YOU SINGLE" in user:
+        elif "ARE YOU SINGLE" in user.upper():
             print("I am in a relationship with your wifi.")
             talk("I am in a relationship with your wifi.")
-        elif "JOKE" in user:
+        elif "JOKE" in user.upper():
             print(pyjokes.get_joke())
             talk(pyjokes.get_joke())
-        elif "GOODBYE" in user or "BYE" in user:
+        elif "GOODBYE" in user.upper() or "BYE" in user.upper():
             print("Goodbye!")
             talk("Goodbye!")
             break
-        elif "THANKS" in user or "THANK YOU" in user:
+        elif "THANKS" in user.upper() or "THANK YOU" in user.upper():
             print("Your wellcome")
             talk("Your wellcome")
         else:
