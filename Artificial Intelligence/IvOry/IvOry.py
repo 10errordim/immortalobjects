@@ -49,15 +49,16 @@ while True:
         time = datetime.datetime.now().strftime("%I:%M %p")
         print("Current time is " + time)
         talk("Current time is " + time)
-    elif "WHO IS" in user:
-        person = user.replace("who the heck is", "")
+    elif "TELL ME WHO IS" in user:
+        person = user.replace("TELL ME WHO IS", "")
         info = wikipedia.summary(person, 1)
         print(info)
         talk(info)
     elif "DATE" in user:
         talk("Sorry, I have a headache")
     elif "ARE YOU SINGLE" in user:
-        talk("I am in a relationship with wifi")
+        talk("I am in a relationship with your wifi")
+        print("I am in a relationship with your wifi")
     elif "JOKE" in user:
         talk(pyjokes.get_joke())
     elif "GOODBYE" in user or "BYE" in user:
