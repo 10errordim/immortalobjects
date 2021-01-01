@@ -37,44 +37,48 @@ def take_command():
     return user
 
 
-while True:
-    user = take_command()
-    print(user)
-    if "PLAY" in user:
-        song = user.replace("PLAY", "")
-        print("PLaying", song)
-        talk("Playing " + song)
-        print("Use me agian!")
-        talk("Use me again!")
-        pywhatkit.playonyt(song)
-        break
-    elif "TIME" in user:
-        now = datetime.now()
-        print("It is " + now.strftime("%H hours %M minutes %S seconds") + " by now.")
-        talk("It is " + now.strftime("%H hours %M minutes %S seconds") + " by now.")
-    elif "WHO IS" in user:
-        person = user.replace("WHO IS", "")
-        info = wikipedia.summary(person, 1)
-        print(info)
-        talk(info)
-    elif "TODAY IS" in user or "IS TODAY" in user:
-        today = date.today()
-        dateinfo = "Today is " + today.strftime("%B %d, %Y")
-        print(dateinfo)
-        talk(dateinfo)
-    elif "ARE YOU SINGLE" in user:
-        print("I am in a relationship with your wifi.")
-        talk("I am in a relationship with your wifi.")
-    elif "JOKE" in user:
-        print(pyjokes.get_joke())
-        talk(pyjokes.get_joke())
-    elif "GOODBYE" in user or "BYE" in user:
-        print("Goodbye!")
-        talk("Goodbye!")
-        break
-    elif "THANKS" in user or "THANK YOU" in user:
-        print("Your wellcome")
-        talk("Your wellcome")
-    else:
-        print("Please say the command again!")
-        talk("Please say the command again!")
+def main_program():
+    while True:
+        user = take_command()
+        print(user)
+        if "PLAY" in user:
+            song = user.replace("PLAY", "")
+            print("PLaying", song)
+            talk("Playing " + song)
+            print("Use me agian!")
+            talk("Use me again!")
+            pywhatkit.playonyt(song)
+            break
+        elif "TIME" in user:
+            now = datetime.now()
+            print("It is " + now.strftime("%H hours %M minutes %S seconds") + " by now.")
+            talk("It is " + now.strftime("%H hours %M minutes %S seconds") + " by now.")
+        elif "WHO IS" in user:
+            person = user.replace("WHO IS", "")
+            info = wikipedia.summary(person, 1)
+            print(info)
+            talk(info)
+        elif "TODAY IS" in user or "IS TODAY" in user:
+            today = date.today()
+            dateinfo = "Today is " + today.strftime("%B %d, %Y")
+            print(dateinfo)
+            talk(dateinfo)
+        elif "ARE YOU SINGLE" in user:
+            print("I am in a relationship with your wifi.")
+            talk("I am in a relationship with your wifi.")
+        elif "JOKE" in user:
+            print(pyjokes.get_joke())
+            talk(pyjokes.get_joke())
+        elif "GOODBYE" in user or "BYE" in user:
+            print("Goodbye!")
+            talk("Goodbye!")
+            break
+        elif "THANKS" in user or "THANK YOU" in user:
+            print("Your wellcome")
+            talk("Your wellcome")
+        else:
+            print("Please say the command again!")
+            talk("Please say the command again!")
+
+
+main_program()
