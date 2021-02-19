@@ -28,7 +28,6 @@ def take_command():
             talk("Listening...")
             voice = listener.listen(source)
             user = listener.recognize_google(voice)
-            # user = user.upper()
             if "IVORY SAY" in user:
                 user = user.upper().replace("IVORY SAY", "")
                 print(user)
