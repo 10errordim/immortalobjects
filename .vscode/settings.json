@@ -23,7 +23,11 @@
             "tab.activeBorderTop": "#ffffff",
             "statusBar.background": "#0011ff",
             "tab.unfocusedActiveBorderTop": "#ffffff",
-            "editorGroupHeader.tabsBackground": "#000000"
+            "editorGroupHeader.tabsBackground": "#000000",
+            "editor.foldBackground": "#111111",
+            "editorWidget.background": "#000000",
+            "menubar.selectionBackground": "#000000",
+            "menu.background": "#000000"
         }
     },
     "editor.tokenColorCustomizations": {
