@@ -28,30 +28,17 @@ while True:
 
     if you == "":
         brain = "I can't really hear you well, please say again, Master!"
-    elif "hello" in you:
+    elif "hello" in you or "hi" in you:
         brain = "Greetings, Master!"
-    elif "hi" in you:
-        brain = "Greetings, Master!"
-    elif "thanks" in you:
+    elif "thanks" in you or "thank you" in you:
         brain = "Your welcome!"
-    elif "thank you" in you:
-        brain = "Your welcome!"
-    elif "today" in you:
-        today = date.today()
-        brain = "Today is " + today.strftime("%B %d, %Y")
-    elif "date is today" in you:
-        today = date.today()
-        brain = "Today is " + today.strftime("%B %d, %Y")
-    elif "is today" in you:
-        today = date.today()
-        brain = "Today is " + today.strftime("%B %d, %Y")
-    elif "today is" in you:
+    elif "is today" in you or "date is today" in you or "today is" in you or "today" in you:
         today = date.today()
         brain = "Today is " + today.strftime("%B %d, %Y")
     elif "time" in you:
         now = datetime.now()
         brain = "It is " + now.strftime("%H hours %M minutes %S seconds") + " by now. Master!"
-    elif "goodbye" in you:
+    elif "goodbye" in you or "bye" in you:
         brain = "Bye, Master!"
         print("IllusOna: " + brain)
         saying.say(brain)

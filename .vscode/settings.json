@@ -52,7 +52,7 @@
         "vector": "cpp"
     },
     "C_Cpp.errorSquiggles": "Enabled",
-    "python.pythonPath": "c:\\users\\io errordim\\appdata\\local\\programs\\python\\python39\\python.exe",
+    "python.pythonPath": "C:\\Python\\python.exe",
     "testMate.cpp.log.logSentry": "disable_3",
     "git.ignoreLimitWarning": true,
     "workbench.preferredLightColorTheme": "Dark+ (Full black)",
